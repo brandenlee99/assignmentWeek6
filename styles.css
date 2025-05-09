@@ -1,0 +1,86 @@
+html {
+  box-sizing: border-box;
+}
+
+
+/*Define elements for root*/
+:root{
+  --main-bg-color: #cccccc;
+  --main-tx-color: #333;
+  --main-ft-family: sans-serif;
+  --main-container-width: 90%;
+  --header-bg-color: #333;
+  --gap: 20px;
+}
+body{
+  margin: 0;
+  background-color: var(--main-bg-color);
+  color: var(--main-tx-color);
+  font-family: var(--main-ft-family);
+}
+.container{
+  width: var(--main-container-width);
+  margin: 0 auto;
+}
+header{
+  background-color: var(--header-bg-color);
+  color: #fff;
+  padding: 8px;
+}
+header h1{
+  margin: 0;
+  padding: 0;
+}
+
+/*Defining the grid*/
+
+.grid{
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: var(--gap);
+  grid-auto-rows: 1fr;
+  
+}
+
+
+/*Defining the box*/
+
+.box{
+  --box-bg-color: #ddd;
+  --box-main-color: #211c6b;
+  --box-padding: 5px 10px;
+  --box-shadow-h-offset: 10px;
+  --box-shadow-v-offset: 5px;
+  --box-shadow-blur: 5px;
+  
+}
+.box{
+  background-color: var(--box-bg-color);
+  padding: var(--box-padding);
+  border: 1px solid var(--box-main-color);
+  box-shadow: 
+    var(--box-shadow-h-offset)
+    var(--box-shadow-v-offset)
+    var(--box-shadow-blur);
+  
+}
+.box h1{
+  color: var(--box-main-color);
+}
+.box p{
+  --box-main-color: #1a3d14;
+  color: var(--box-main-color);
+}
+@keyframes example {
+  from {background-color: blue;}
+  to {background-color: green;}
+}
+div{
+  width: 100px;
+  height: 100px;
+  background-color: none;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
